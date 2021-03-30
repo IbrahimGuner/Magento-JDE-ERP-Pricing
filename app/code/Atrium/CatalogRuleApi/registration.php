@@ -1,6 +1,6 @@
 <?php
     \Magento\Framework\Component\ComponentRegistrar::register(
         \Magento\Framework\Component\ComponentRegistrar::MODULE,
-        'CatalogRuleApi',
+        'Atrium+CatalogRuleApi',
         __DIR__
     );
