@@ -1,6 +1,6 @@
 # Magento-ERP-Pricing
 
-ERP (JDE) Pricing Need to update Magento E-Commerce App
+ERP (JDE) Pricing Needs to update Magento E-Commerce App
 In order to achieve this goal 2 Main Updates Needs to be Done.
 
 1) Magento Catalog Price Rule Needs to Updated to get the pricing info from the ERP System.
