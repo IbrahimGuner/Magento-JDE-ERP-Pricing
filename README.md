@@ -24,16 +24,19 @@ module.xml (Module Name version 1.00, no Dependency)
 
 
 Magento 2 Core Files Reference:-
-Magento\CatalogRule\Api\interface\CatalogRuleRepositoryInterface
-Magento\CatalogRule\Model\Rule.php
+app/code/Atrium/CatalogRule\Api\interface\CatalogRuleRepositoryInterface
+app/code/Atrium/CatalogRule\Model\Rule.php
 
-app/code/CatalogRuleApi/etc/webapi.xml
+app/code/Atrium/CatalogRuleApi/etc/webapi.xml
 webapi.xml for getting the list of all catalogRules 
 
 Magento/CatalogRuleApi\Api\CatalogRuleRepositoryInterface
 app/code/CatalogRuleApi/etc/di.xml
 di.xml to specify the preference implementation classes for module and custom interface.
 
+
+app/code/Atrium/CatalogRuleApi/Plugin/CatalogRuleRepositoryPlugin
+Use Catalog Price Rules with GET List.
 
 Execution REST API methods V1/catalogRules/:ruleId GET,POST
 
