@@ -16,7 +16,70 @@ Solution: Update Magento core with a new custom module
 
 Pricing update will be through an API Hookup
 
-ERP Module Defined via WEBAPI will do the job.  
+ERP Module Defined via WEBAPI interface will do the job, the module implementation details are below:
+
+registration.php (extends catalogrule API)
+module.xml (Module Name version 1.00, no Dependency)
+
+
+
+Magento 2 Core Files Reference:-
+Magento\CatalogRule\Api\interface\CatalogRuleRepositoryInterface
+Magento\CatalogRule\Model\Rule.php
+
+app/code/CatalogRuleApi/etc/webapi.xml
+webapi.xml for getting the list of all catalogRules 
+
+Magento/CatalogRuleApi\Api\CatalogRuleRepositoryInterface
+app/code/CatalogRuleApi/etc/di.xml
+di.xml to specify the preference implementation classes for module and custom interface.
+
+
+Execution REST API methods V1/catalogRules/:ruleId GET,POST
+
+
+
+URL: rest/V1/catalogRules/:ruleId
+Sample Request Format
+
+{
+“rule”: {
+“name”: “pricing update”,
+“description”: “JDE”,
+“is_active”: 1,
+“rule_condition”: {
+“type”: “Magento\CatalogRule\Model\Rule\Condition\Combine”,
+“attribute”: “”,
+“operator”: “”,
+“value”: “1”,
+“is_value_parsed”: false,
+“aggregator”: “all”,
+“conditions”: [
+{
+“type”: “Magento\CatalogRule\Model\Rule\Condition\Product”,
+“attribute”: “category_ids”,
+“operator”: “()”,
+“value”: “27”,
+“is_value_parsed”: false,
+“aggregator”: “”
+}
+]
+},
+“stop_rules_processing”: 1,
+“sort_order”: 0,
+“simple_action”: “none”,
+“discount_amount”: 0,
+“extension_attributes”: {
+“website_ids”: [
+“1”
+],
+“customer_group_ids”: [
+“0”,
+“2”
+]
+}
+}
+}
 
 
 
