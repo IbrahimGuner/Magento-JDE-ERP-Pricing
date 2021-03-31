@@ -1,6 +1,6 @@
 # Magento-ERP-Pricing
 
-ERP (JDE) Pricing Will override Magento E-Commerce App Catalog Pricing.
+ERP (JDE) Pricing will override Magento E-Commerce App Catalog Pricing.
 In order to achieve this goal 2 Main Updates Needs to be Done.
 
 1) Magento Catalog Price Rule Needs to Updated to get the pricing info from the ERP System.
